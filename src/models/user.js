@@ -35,7 +35,6 @@ const userSchema = new mongoose.Schema({
         required: true,
         trim: true,
         validate (value) {
-            console.log('Validator', value)
             if (value.length < 7) {
                 throw Error('The password is to short')
             } else if (value.toUpperCase().includes('PASSWORD')) {
